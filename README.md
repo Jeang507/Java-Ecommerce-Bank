@@ -15,8 +15,6 @@ El proyecto aplica principios de **Programación Orientada a Objetos**, **arquit
 
 Proyecto desarrollado con la colaboración de **Beira Barria**.
 
----
-
 ## Visión General del Sistema
 
 El proyecto está conformado por **dos aplicaciones que trabajan juntas**:
@@ -37,8 +35,6 @@ El proyecto está conformado por **dos aplicaciones que trabajan juntas**:
 > El e-commerce **no administra dinero**.  
 > Toda operación financiera es responsabilidad exclusiva del banco.
 
----
-
 ## Flujo de Pago Integrado
 
 1. El usuario confirma la compra en el e-commerce.
@@ -54,13 +50,9 @@ El proyecto está conformado por **dos aplicaciones que trabajan juntas**:
    - El banco rechaza la operación
    - El e-commerce notifica al usuario
 
----
-
 ## Arquitectura General
 
 Ambos módulos siguen una **arquitectura en capas**, manteniendo independencia lógica, pero comunicándose mediante una capa de red bien definida.
-
----
 
 ## Módulo E-commerce
 
@@ -104,8 +96,6 @@ Ambos módulos siguen una **arquitectura en capas**, manteniendo independencia l
 - **WrapLayout**  
   Layout adaptable para mostrar productos en forma de catálogo.
 
----
-
 ## Módulo Bank
 
 El módulo **Bank** funciona como un **servidor bancario independiente**, encargado de toda la lógica financiera del sistema.  
@@ -143,9 +133,7 @@ Este módulo es la **autoridad central del dinero** y valida cada transacción s
 - **users_secure.txt**  
   Almacena usuarios bancarios y sus saldos.
 - **transactions.txt**  
-  Registro histórico de operaciones financieras.
-
----
+  Registro histórico de operaciones financieras.-
 
 ## Comunicación entre Módulos
 
@@ -154,8 +142,6 @@ Este módulo es la **autoridad central del dinero** y valida cada transacción s
 - Cliente: E-commerce
 - Servidor: Bank
 - Comunicación controlada mediante comandos y validaciones
-
----
 
 ## Scripts de Automatización (.sh)
 
@@ -178,16 +164,12 @@ Por este motivo, el sistema está diseñado y probado para **entornos Linux**.
   Script principal del **E-commerce**.  
   Compila el proyecto usando librerías externas ubicadas en `lib/` y ejecuta la aplicación `EcommerceApp`.
 
----
-
 ### Orden de Ejecución Recomendado
 
 - bash
 ./runBankServer.sh
 ./runATM.sh
 ./run.sh
-
----
 
 ## Compilación y Ejecución
 

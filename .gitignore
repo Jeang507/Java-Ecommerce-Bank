@@ -1,0 +1,13 @@
+# Java compilado
+*.class
+
+# Carpetas de compilación
+bin/
+out/
+
+# Archivos generados en ejecución
+factura_*.txt
+
+# Logs
+*.log
+
